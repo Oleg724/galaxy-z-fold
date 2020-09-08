@@ -1,0 +1,172 @@
+@import '../_variables';
+
+.side-panel {
+  width: $side-width;
+  min-width: $min-side-width;
+  position: absolute;
+  right: 0;
+  top: $section-header-height;
+
+  &__list {
+    margin: 72px 0 6px 0;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: 50px;
+    text-align: center;
+
+    &:first-child {
+      order: 2
+    }
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(4) {
+      order: 3;
+    }
+
+    & span {
+      color: $black;
+    }
+
+    &:first-child span {
+      margin-top: 17px;
+      width: 111px;
+    }
+
+    &:nth-child(2) span {
+      margin-top: 15px;
+    }
+
+    &:nth-child(3) span {
+      margin-top: 17px;
+    }
+
+    &:nth-child(4) span {
+      margin-top: 10px;
+      width: 111px;
+    }
+
+    &:first-child img {
+      width: 59px;
+    }
+
+    &:nth-child(2) img {
+      margin-top: 7px;
+      width: 62px;
+    }
+
+    &:nth-child(3) img {
+      margin-left: -2px;
+      height: 50px;
+    }
+
+    &:nth-child(4) img {
+      width: 66px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    font-family: $font-sharp-bold;
+    font-size: 12px;
+    margin-top: 19px;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .side-panel {
+    width: 100%;
+    position: initial;
+    z-index: 2;
+    height: 130px;
+    margin-bottom: 20px;
+
+    &__list {
+      width: 90%;
+      margin: 0 auto;
+      height: 100%;
+      align-items: flex-end;
+    }
+  }
+
+  .list {
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__item {
+      margin-bottom: 27px;
+
+      &:nth-child(2) img {
+        margin-top: 4px;
+        height: 47px;
+      }
+
+      &:nth-child(2) span {
+        margin-top: 16px;
+      }
+
+      &:nth-child(3) span {
+        margin-top: 16px;
+      }
+
+      &:nth-child(3) img {
+        margin-left: -2px;
+        margin-top: 4px;
+        height: 45px;
+      }
+
+      &:nth-child(4) img {
+        margin-top: 3px;
+        width: initial;
+      }
+
+      &:nth-child(4) span {
+        margin-top: 11px;
+      }
+
+      &:nth-child(4) {
+        margin-bottom: 21px;
+      }
+    }
+
+    &__link {
+      height: 79px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .side-panel {
+    height: initial;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 0;
+
+    &__item {
+      margin-bottom: 27px;
+      margin-top: 27px;
+    }
+  }
+}

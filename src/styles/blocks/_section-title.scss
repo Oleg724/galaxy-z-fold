@@ -1,0 +1,10 @@
+@import '../_variables';
+
+.title {
+  &__title {
+    color: $white;
+    padding-left: 25px;
+    font-size: 17px;
+    font-family: $font-sharp-bold;
+  }
+}

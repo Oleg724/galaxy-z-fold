@@ -1,0 +1,109 @@
+@import '../_variables';
+
+.registration-popup {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 57.57vw;
+    min-height: 372px;
+    max-width: 907px;
+    max-height: 520px;
+    background-color: $blue-opacity-main;
+    transition: all .7s linear;
+  }
+
+  &__inner {
+    position: relative;
+    margin: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 96%;
+    width: 100%;
+  }
+
+  &__footnote {
+    color: $white;
+    align-self: flex-start;
+  }
+}
+
+.send {
+  min-height: initial;
+  width: 60vw;
+  height: 15vw;
+  border-radius: 20px;
+
+  & p {
+    display: block;
+    font-size: 27px;
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    color: $white;
+    opacity: 0;
+    animation: animation 1.3s ease-in forwards;
+  }
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .registration-popup {
+
+    &__content {
+      width: 93.3vw;
+      height: 54.1vw;
+    }
+  }
+}
+
+@media screen and (max-width: 667px) {
+  .send {
+    width: 90vw!important;
+    height: initial!important;
+
+    & p {
+      font-size: 18px;
+      padding: 15px;
+      width: initial;
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .registration-popup {
+
+    &__content {
+      height: 482px;
+    }
+  }
+}
+

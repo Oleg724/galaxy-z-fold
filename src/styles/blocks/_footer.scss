@@ -1,0 +1,59 @@
+@import '../_variables';
+
+.footer {
+  width: 100%;
+  margin: 68px auto 35px auto;
+  background-color: $grey-light;
+  display: flex;
+  justify-content: center;
+
+  &__inner {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  &__text {
+    width: 312px;
+    color: $black;
+
+    &:first-child {
+      font-size: 16px;
+    }
+
+    &:last-child {
+      font-size: 16px;
+      margin-top: 7px;
+      width: 270px;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .footer {
+    padding-bottom: 100px;
+
+    &__inner {
+      width: 83.33%;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .footer {
+    padding-bottom: 0;
+    margin: 212px auto 65px auto;
+
+    &__inner {
+      width: 86.55%;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .footer {
+
+    &__text {
+      width: 100%;
+    }
+  }
+}

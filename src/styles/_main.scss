@@ -1,0 +1,23 @@
+@import 'fonts-samsung';
+@import '_layout';
+@import 'blocks/blocks';
+@import '_variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: $white;
+}
+
+body {
+  background-color: $grey-light;
+  font-family: "Samsung One", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.active {
+  display: flex;
+}

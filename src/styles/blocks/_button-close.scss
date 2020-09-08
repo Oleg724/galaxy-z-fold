@@ -1,0 +1,60 @@
+@import '../_variables';
+
+.close-btn-wrapper {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.close-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid $white;
+  transition: all .3s ease-in;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 29px;
+    height: 2px;
+    background-color: $white;
+    transition: width .3s ease-in;
+  }
+
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:hover:before,
+  &:hover:after {
+    width: 33px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .close-btn {
+    width: 42px;
+    height: 42px;
+    border: 2px solid $white;
+
+    &:before,
+    &:after {
+      width: 25px;
+      height: 1px;
+    }
+  }
+}

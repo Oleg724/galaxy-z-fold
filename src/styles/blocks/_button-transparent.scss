@@ -1,0 +1,103 @@
+@import '../_variables';
+
+.btn-transparent {
+  background-color: transparent;
+  border-radius: 9px;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 50px;
+  padding: 10px 0;
+
+  &--flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      text-align: center;
+    }
+  }
+
+  &--width-sm {
+    width: 200px;
+  }
+
+  &--lg {
+    width: 260px;
+    color: $white;
+    border: 1px solid $white;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--sm {
+    width: 260px;
+
+    &-white {
+      border: 1px solid $white;
+      color: $white;
+    }
+
+    &-black {
+      border: 1px solid $black;
+      color: $black;
+    }
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .btn-transparent {
+    &--sm {
+      width: 395px;
+      height: 90px;
+      font-size: 22px;
+    }
+
+    &--width-sm {
+      width: 345px;
+      height: 90px;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .btn-transparent {
+    height: 90px;
+    width: 395px;
+
+    &--lg {
+      width: 450px;
+      height: 90px;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .btn-transparent {
+
+    &--width-sm {
+      width: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .btn-transparent {
+
+    &--lg {
+      width: 92%;
+    }
+
+    &--sm {
+      width: 100%;
+    }
+
+    &--width-sm {
+      width: 124%;
+    }
+  }
+}

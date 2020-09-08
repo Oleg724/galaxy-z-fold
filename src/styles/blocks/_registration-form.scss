@@ -1,0 +1,115 @@
+@import '../_variables';
+
+.registration {
+  padding: 15px 40px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 73%;
+  height: 100%;
+  max-width: calc(465px + 120px);
+
+  &__input {
+    width: $input-width;
+    height: 45px;
+    margin: 17px 0 17px 0;
+    transition: all .3s ease-out;
+    text-indent: 15px;
+    font-size: 18px;
+    font-family: $font-one;
+    border: none;
+    color: $black;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: $max-width-label;
+    font-size: 20px;
+  }
+
+  &__label span,
+  &__title,
+  &__submit {
+    color: $white;
+  }
+
+  &__label span {
+    display: inline-block;
+    width: $label-width;
+  }
+
+  &__title {
+    font-size: 22px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .registration {
+    width: 74.8%;
+    padding: 20px 58px 15px 0;
+    margin-left: -25px;
+
+    &__input {
+      width: 80.8%;
+      height: 33px;
+      margin: 12px 0 12px 0;
+    }
+
+    &__label span {
+      width: $label-width-720;
+      font-size: 16px;
+    }
+
+    &__title {
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .registration {
+
+    &__input {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .registration {
+    padding: 20px 0 15px 0;
+
+    &__input {
+      width: 100%;
+    }
+
+    &__label {
+      flex-direction: column;
+      align-items: center;
+
+      & span {
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .registration {
+
+    &__input {
+      width: $input-width-lg;
+    }
+  }
+}

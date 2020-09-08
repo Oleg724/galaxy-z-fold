@@ -1,0 +1,188 @@
+@import '../_variables';
+
+.banner-sm {
+  width: 48.86%;
+  margin: 73px 0 63px 0;
+  display: flex;
+  align-items: center;
+
+  &--white {
+    background-color: $white;
+  }
+
+  &--black {
+    background-color: $black;
+  }
+
+  &__img {
+    width: 100%;
+
+    &--lg {
+      max-width: initial;
+      height: 100%;
+      margin-bottom: -4px;
+    }
+
+    &--md {
+      max-width: 245px;
+    }
+  }
+
+  &__item {
+
+    &:first-child {
+      padding: 70px 0 80px 70px;
+    }
+
+    &:last-child {
+      width: 100%;
+      height: 100%;
+    }
+
+
+    &--relative {
+      position: relative;
+      width: 55%;
+    }
+
+    &--flex {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    display: block;
+    color: $white;
+    font-size: 70px;
+    font-family: $font-sharp-bold;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 4px;
+  }
+  
+  &--relative {
+    position: relative;
+  }
+}
+
+.banner-sm-content {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    color: $black;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    width: 50%;
+    letter-spacing: 2px;
+    min-width: 257px;
+    line-height: 1.2;
+
+    &--white {
+      color: $white;
+    }
+  }
+
+  &--sm {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 1390px) {
+  .banner-sm {
+    width: 100%;
+    flex-direction: column;
+
+    &__item {
+
+      &--flex {
+        justify-content: center;
+      }
+
+      &:first-child {
+        padding: 70px 0 80px 0;
+        height: 464px;
+      }
+    }
+
+    &__text {
+      font-size: 100px;
+    }
+
+    &__img {
+
+      &--md {
+        max-width: initial;
+        width: 75%;
+        margin-bottom: 130px;
+      }
+    }
+
+    .banner-sm-content {
+
+      &--sm {
+        width: 66%;
+      }
+
+      &__text {
+        font-size: 64px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .banner-sm-content {
+    width: 74%;
+    align-items: center;
+
+    &__text--white {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .banner-sm {
+
+    &--relative {
+      height: 139vw;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .banner-sm-content {
+
+    &__text {
+      font-size: 40px!important;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .banner-sm {
+    margin: 0 0 0 0;
+    width: initial;
+
+    &--white {
+      margin: 0 0 30px 0!important;
+    }
+
+    &__img {
+
+    }
+
+    &__item {
+
+      &:first-child {
+        padding: 42px 0 42px 0;
+      }
+    }
+  }
+}
